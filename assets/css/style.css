@@ -3,10 +3,10 @@
     src: url(../font/type_keys/TypeKeys.ttf);
 }
 
-@font-face {
+/*@font-face {
     font-family: OldNewspaperTypes;
     src: url(../assets/images/soccerfont.jpg);
-}
+}*/
 
 body {
 
@@ -90,4 +90,37 @@ button a {
     h2.title {
         font-size: 3em;
     }
+}
+
+#demo {
+    font-family: Impact, Charcoal, sans-serif;
+    color: blueviolet;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 5em;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#time-remaining {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+    width: 80%;
+    margin: 0 auto;
+    float: center;
+    font-size: 300%;
+    /*margin-top: 2%;*/
+    margin-bottom: 5%;
+    font-display: bold;
+
+}
+
+.start-button {
+    align-content: center;
+    font-size: 300%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-display: bold;
+    color: aquamarine
 }

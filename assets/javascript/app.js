@@ -34,7 +34,7 @@ var randomQuestions = [
   }
 ];
 /* This is my randomQuestion */
-/* Incorrect answers will show up the red highlight color in every wrong question*/
+/* Incorrect answers will show up the red highlight color question mark in every wrong question*/
 /* Note: do not use capital word because it will take as incorrect*/
 
 for (i = 0; i < randomQuestions.length; i++) {
@@ -66,6 +66,33 @@ document.onkeydown = function(e) {
     testResults();
   }
 };
+
+let seconds = 30;
+var timer = setInterval(countDown, 1000);
+
+function countDown() {
+  // console.log(seconds);
+  seconds--;
+  $('#time-remaining').text(`Time remaining: ${seconds}`);
+  if (seconds <= 0) {
+    alert('time up!!');
+    clearInterval(timer);
+    // seconds = 1;
+  }
+}
+
+// running a CountDown Timer
+
+$('#start-button').on('click', function() {
+  // console.log('this was clicked, start button');
+  timer = setInterval(countDown, 1000);
+});
+$('#stop-button').on('click', function() {
+  // console.log('this was clicked');
+  clearInterval(timer);
+});
+
+// $(document).ready(setInterval(countDown, 1000));
 
 // function startTime() {
 //   var today = new Date();
