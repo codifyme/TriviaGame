@@ -67,6 +67,7 @@ document.onkeydown = function(e) {
   }
 };
 
+// Start a 30 seconds timer for user to respond or choose an answer to each question
 let seconds = 30;
 var timer = setInterval(countDown, 1000);
 
@@ -74,10 +75,11 @@ function countDown() {
   // console.log(seconds);
   seconds--;
   $('#time-remaining').text(`Time remaining: ${seconds}`);
-  if (seconds <= 0) {
+  if (seconds == 0) {
     alert('time up!!');
     clearInterval(timer);
     // seconds = 1;
+    testResults();
   }
 }
 
